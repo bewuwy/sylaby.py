@@ -12,13 +12,6 @@
 # np. roz‑mowa, przed-kła-dać.
 
 
-def replace_in_str(string, i, char):
-    string = [char for char in string]
-    string[i] = char
-
-    return "".join(string)
-
-
 def get_sylaby(word):
     word = word.lower()
     vowels = ["a", "e", "i", "o", "u", "y", "ą", "ę", "ó"]
@@ -79,7 +72,8 @@ def get_sylaby(word):
 
 def test_for(t_list):
     for tw in t_list:
-        print(get_sylaby(tw))
+        syl = get_sylaby(tw)
+        print(f"{'•'.join(syl[0])} {syl[1]}")
 
 
 if __name__ == '__main__':
